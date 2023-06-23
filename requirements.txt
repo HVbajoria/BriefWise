@@ -97,7 +97,6 @@ pyrsistent==0.18.1
 python-dateutil==2.8.2
 python-docx==0.8.11
 pytz==2022.2
-pytz-deprecation-shim==0.1.0.post0
 pywin32==304
 pywinpty==2.0.7
 pyzmq==23.2.0
@@ -107,13 +106,9 @@ rich==12.5.1
 scikit-learn==1.1.2
 scipy==1.9.0
 semver==2.13.0
-Send2Trash==1.8.0
-sgmllib3k==1.0.0
-six==1.16.0
 sklearn==0.0
 smart-open==5.2.1
 smmap==5.0.0
-soupsieve==2.3.2.post1
 spacy==3.4.1
 spacy-legacy==3.0.9
 spacy-loggers==1.0.3
