@@ -7,8 +7,8 @@ env_vars = dotenv_values('D:\BriefWise\Text-Summerizer\Text_Summarizer\.env')
 
 print(env_vars)
 
-endpoint = env_vars["endpoint"]
-key = env_vars["key"]
+endpoint = st.secrets["endpoint"]
+key = st.secrets["key"]
 
 def create_sublists(original_list, sublist_size):
     sublists = []
