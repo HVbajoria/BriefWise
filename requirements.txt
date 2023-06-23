@@ -5,4 +5,4 @@ tfidf
 numpy
 spacy
 streamlit
-sklearn
+scikit-learn
