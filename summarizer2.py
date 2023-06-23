@@ -45,7 +45,7 @@ def generate_summary(file_path):
 
      # Split the text into smaller chunks
     lines = text.split("\n")
-    chunks = create_sublists(lines, 5)
+    chunks = create_sublists(lines, 4)
     summaries = []
     for chunk in chunks:
         poller = text_analytics_client.begin_extract_summary(chunk)
