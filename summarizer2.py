@@ -1,6 +1,7 @@
 from dotenv import dotenv_values
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
+import streamlit as st
 
 # Enter your Azure Text Analytics subscription key and endpoint
 env_vars = dotenv_values('D:\BriefWise\Text-Summerizer\Text_Summarizer\.env')
