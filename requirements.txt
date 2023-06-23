@@ -1,4 +1,4 @@
-azure-ai-textanalytics==5.2.0b2
+azure-ai-textanalytics==5.3.0b2
 PyPDF2
 python-dotenv
 tfidf
