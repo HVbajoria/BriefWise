@@ -74,8 +74,11 @@ if col1.button('SUMMARIZE'):
         textfile.write(text)
         textfile.close()
 
-        # To generate audio
-        speech_mp3_generator('output.txt')
+        # To show audio
+        with open("output.txt", 'r') as file:
+            text_to_speak = file.read()
+        tts = gTTS(text=text_to_speak, lang='en')
+        tts.save("outputaudio.mp3")
         audio_file = open('outputaudio.mp3', 'rb')
         audio_bytes = audio_file.read()
         st.audio(audio_bytes, format='audio/,mp3')
