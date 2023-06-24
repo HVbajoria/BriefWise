@@ -7,7 +7,7 @@ from summarizer1 import summarizer
 from summarizer2 import generate_summary
 from pathlib import Path
 import os
-import PyPDF2
+from PyPDF2 import PdfReader
 import numpy as np
 from text2speech import speech_mp3_generator
 
@@ -35,11 +35,11 @@ if col1.button('SUMMARIZE'):
                 st.snow()
                 st.success('Results Generating below ....!', icon="✅")
                 if file.name[-3:] == "pdf":
-                    pdfReader = PyPDF2.PdfFileReader(file)
-                    num = pdfReader.numPages
+                    pdfReader = PyPDF2.PdfReader(file)
+                    num = len(pdfReader.pages)
                     for i in range(0,num):
                         pageobj = pdfReader.pages[i]
-                        resulttext = pageobj.extractText()
+                        resulttext = pageobj.extract_text()
                         text = text.join(resulttext)
                         text = re.sub(r'(?<=\S)\s{2,}(?=\S)', ' ', text)
                         text = re.sub(r'\n', ' ', text)
