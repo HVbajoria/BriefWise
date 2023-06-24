@@ -1,5 +1,0 @@
-build-essential
-libssl-dev
-ca-certificates
-libasound2
-wget
