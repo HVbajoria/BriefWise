@@ -10,6 +10,7 @@ import os
 from PyPDF2 import PdfReader
 import numpy as np
 from text2speech import speech_mp3_generator
+from gtts import gTTS
 
 st.set_page_config(page_title="BriefWise", page_icon="📝", layout="centered")
 
