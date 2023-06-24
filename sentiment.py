@@ -1,3 +1,4 @@
+import streamlit as st
 def create_sublists(paragraph, sublist_size, sub_size=5):
     sentences = paragraph.split('. ')  # Split at period followed by a space
     sentences = [s.strip() for s in sentences]  # Remove leading/trailing spaces
@@ -44,8 +45,8 @@ def analyze_sentiment(file_path) -> None:
     from dotenv import dotenv_values
 
     env_vars = dotenv_values('D:\BriefWise\Text-Summerizer\Text_Summarizer\.env')
-    endpoint = env_vars["endpoint"]
-    key = env_vars["key"]
+    endpoint = st.secrets["endpoint"]
+    key = st.secrets["key"]
 
     text_analytics_client = TextAnalyticsClient(endpoint=endpoint, credential=AzureKeyCredential(key))
 
