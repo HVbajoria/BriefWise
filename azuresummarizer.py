@@ -11,7 +11,7 @@ print(env_vars)
 endpoint = st.secrets["endpoint"]
 key = st.secrets["key"]
 
-def create_sublists(paragraph, sublist_size):
+def create_sublists(paragraph, sublist_size, sub_size=5):
     sentences = paragraph.split('. ')  # Split at period followed by a space
     sentences = [s.strip() for s in sentences]  # Remove leading/trailing spaces
 
@@ -22,19 +22,27 @@ def create_sublists(paragraph, sublist_size):
         split_sentences.extend(sentence.split('? '))
 
     split_sentences = [s.strip() for s in split_sentences]  # Remove leading/trailing spaces
+    
     original_list = split_sentences
     sublists = []
     sublist = []
 
+    s=''
+    c=0
     for element in original_list:
-        sublist.append(element)
-
+        s=s+element
+        c+=1
+        if c==sub_size:
+            sublist.append(s)
+            s=''
+            c=0
         if len(sublist) == sublist_size:
             sublists.append(sublist)
             sublist = []
-
+    
     # Add the remaining elements if the original list length is not divisible by sublist_size
-    if sublist:
+    if s!='':
+        sublist.append(s)
         sublists.append(sublist)
 
     return sublists
