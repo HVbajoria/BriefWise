@@ -1,7 +1,7 @@
 freeglut3-dev
 libgtk2.0-dev
 build-essential
-libssl-dev 
 ca-certificates
 libasound2
 wget
+libssl1.0-dev
