@@ -60,3 +60,14 @@ if col1.button('SUMMARIZE'):
         st.write(summary1)
         st.markdown("<h3> > Summary 2 : </h3>" ,  unsafe_allow_html=True)
         st.write(summary2)
+        textfile = open("output.txt","w")
+        text = "Sentiment of the document: "+sentiment+"\n\nSummary 1:\n"+summary1+"\n\nSummary 2:\n"+summary2
+        textfile.write(text)
+        textfile.close()
+        with open('output.txt', 'r') as file:
+            output = file.read()
+        st.download_button(
+        label="Download Result",
+        data=output,
+        file_name='output.txt',
+        )
