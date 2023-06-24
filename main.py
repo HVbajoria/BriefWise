@@ -99,9 +99,9 @@ if col1.button('SUMMARIZE'):
             output = file.read()
         
         st.download_button(
-        label="Download Audio",
-    data=output,
-    file_name='output.mp3',
-    mime="audio/mpeg",
-    help="To download an audio file of the generated results"
-)
+            label="Download Audio",
+            data=output,
+            file_name='output.mp3',
+            mime="audio/mpeg",
+            help="To download an audio file of the generated results"
+        )
