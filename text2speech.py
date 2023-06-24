@@ -2,6 +2,7 @@ import subprocess
 import azure.cognitiveservices.speech as speechsdk
 from pydub import AudioSegment
 import azure.cognitiveservices.speech as speechsdk
+import streamlit as st
 
 def speech_mp3_generator(file_path):
     # Creates an instance of a speech config with specified subscription key and service region.
