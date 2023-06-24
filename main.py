@@ -35,7 +35,7 @@ if col1.button('SUMMARIZE'):
                 st.snow()
                 st.success('Results Generating below ....!', icon="✅")
                 if file.name[-3:] == "pdf":
-                    pdfReader = PyPDF2.PdfReader(file)
+                    pdfReader = PdfReader(file)
                     num = len(pdfReader.pages)
                     for i in range(0,num):
                         pageobj = pdfReader.pages[i]
