@@ -3,3 +3,5 @@ PyPDF2
 python-dotenv
 tfidf
 scikit-learn
+azure-cognitiveservices-speech
+pydub
