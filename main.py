@@ -61,7 +61,9 @@ if col1.button('SUMMARIZE'):
         st.markdown("<h3> > Summary 2 : </h3>" ,  unsafe_allow_html=True)
         st.write(summary2)
         textfile = open("output.txt","w")
-        text = "Sentiment of the document: "+sentiment+"\n\nSummary 1:\n"+summary1+"\n\nSummary 2:\n"+summary2
+        text = "Summary 1:\n"+summary1+"\n\nSummary 2:\n"+summary2
+        if sentimenter:
+            text = "Sentiment of the document: "+sentiment+"\n\n" + text
         textfile.write(text)
         textfile.close()
         with open('output.txt', 'r') as file:
