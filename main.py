@@ -14,11 +14,27 @@ from gtts import gTTS
 
 st.set_page_config(page_title="BriefWise", page_icon="📝", layout="centered")
 
+# Header styling
+def gradient_text(text, color1, color2):
+    gradient_css = f"""
+        background: -webkit-linear-gradient(left, {color1}, {color2});
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 42px;
+    """
+    return f'<span style="{gradient_css}">{text}</span>'
+
+color1 = "red"
+color2 = "blue"
+text = "BriefWise"
+
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image("logo.png", width=200)
-st.markdown("<h1 style='text-align: center;'>BriefWise</h1>",
-            unsafe_allow_html=True)
+styled_text = gradient_text(text, color1, color2)
+st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
+
 
 
 file = st.file_uploader("Please choose a file", type=['txt', 'pdf'])
