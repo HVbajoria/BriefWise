@@ -1,17 +1,28 @@
+import re
 from dotenv import dotenv_values
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
-import streamlit as st
 
 # Enter your Azure Text Analytics subscription key and endpoint
 env_vars = dotenv_values('D:\BriefWise\Text-Summerizer\Text_Summarizer\.env')
 
 print(env_vars)
 
-endpoint = st.secrets["endpoint"]
-key = st.secrets["key"]
+endpoint = env_vars["endpoint"]
+key = env_vars["key"]
 
-def create_sublists(original_list, sublist_size):
+def create_sublists(paragraph, sublist_size):
+    sentences = paragraph.split('. ')  # Split at period followed by a space
+    sentences = [s.strip() for s in sentences]  # Remove leading/trailing spaces
+
+    # Split further at exclamation marks and question marks
+    split_sentences = []
+    for sentence in sentences:
+        split_sentences.extend(sentence.split('! '))
+        split_sentences.extend(sentence.split('? '))
+
+    split_sentences = [s.strip() for s in split_sentences]  # Remove leading/trailing spaces
+    original_list = split_sentences
     sublists = []
     sublist = []
 
@@ -43,9 +54,7 @@ def generate_summary(file_path):
     with open(file_path, 'r') as file:
         text = file.read()
 
-     # Split the text into smaller chunks
-    lines = text.split("\n")
-    chunks = create_sublists(lines, 4)
+    chunks = create_sublists(text, 9)
     summaries = []
     for chunk in chunks:
         poller = text_analytics_client.begin_extract_summary(chunk)

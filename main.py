@@ -1,3 +1,4 @@
+import re
 from sentiment import analyze_sentiment
 import streamlit as st
 from io import StringIO
@@ -6,6 +7,7 @@ from summarizer1 import summarizer
 from summarizer2 import generate_summary
 from pathlib import Path
 import os
+import PyPDF2
 
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
@@ -29,9 +31,15 @@ if col1.button('SUMMARIZE'):
                 st.stop()
             else:
                 if file.name[-3:] == "pdf":
-                    path=Path("uploaded_pdfs/" + file.name)
-                    path.write_bytes(file.getvalue())
-                    text = pdf_to_text("uploaded_pdfs/" + file.name)
+                    pdfReader = PyPDF2.PdfFileReader(file)
+                    num = pdfReader.numPages
+                    for i in range(0,num):
+                        pageobj = pdfReader.pages[i]
+                        resulttext = pageobj.extractText()
+                        text = text.join(resulttext)
+                        text = re.sub(r'(?<=\S)\s{2,}(?=\S)', ' ', text)
+                        text = re.sub(r'\n', ' ', text)
+                    print(text)
 
                 else:
                     stringio = StringIO(file.getvalue().decode("utf-8"))
