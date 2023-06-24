@@ -11,7 +11,7 @@ print(env_vars)
 endpoint = st.secrets["endpoint"]
 key = st.secrets["key"]
 
-def create_sublists(paragraph, sublist_size, sub_size=5):
+def create_sublists(paragraph, sublist_size, sub_size=8):
     sentences = paragraph.split('. ')  # Split at period followed by a space
     sentences = [s.strip() for s in sentences]  # Remove leading/trailing spaces
 
