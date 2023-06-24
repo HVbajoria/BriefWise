@@ -4,4 +4,4 @@ build-essential
 ca-certificates
 libasound2
 wget
-libssl1.1
+libssl-dev
