@@ -11,7 +11,7 @@ print(env_vars)
 endpoint = st.secrets["endpoint"]
 key = st.secrets["key"]
 
-def create_sublists(paragraph, sublist_size, sub_size=8):
+def create_sublists(paragraph, sublist_size, sub_size=5):
     sentences = paragraph.split('. ')  # Split at period followed by a space
     sentences = [s.strip() for s in sentences]  # Remove leading/trailing spaces
 
@@ -71,7 +71,6 @@ def generate_summary(file_path):
             if result.kind == "ExtractiveSummarization":
                 return(" ".join([sentence.text for sentence in result.sentences]))
     
-    print(summaries)
     return ' '.join(summaries)
             
     # [END extract_summary]
