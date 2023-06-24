@@ -4,12 +4,12 @@ import streamlit as st
 from io import StringIO
 from pdf_txt import pdf_to_text
 from summarizer1 import summarizer
-from summarizer2 import generate_summary
+from azuresummarizer import generate_summary
 from pathlib import Path
 import os
 from PyPDF2 import PdfReader
 import numpy as np
-from text2speech import speech_mp3_generator
+from azurespeech import speech_mp3_generator
 from gtts import gTTS
 
 st.set_page_config(page_title="BriefWise", page_icon="📝", layout="centered")
