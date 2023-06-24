@@ -2,14 +2,14 @@ import re
 from dotenv import dotenv_values
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
-
+import streamlit as st
 # Enter your Azure Text Analytics subscription key and endpoint
 env_vars = dotenv_values('D:\BriefWise\Text-Summerizer\Text_Summarizer\.env')
 
 print(env_vars)
 
-endpoint = env_vars["endpoint"]
-key = env_vars["key"]
+endpoint = st.secrets["endpoint"]
+key = st.secrets["key"]
 
 def create_sublists(paragraph, sublist_size):
     sentences = paragraph.split('. ')  # Split at period followed by a space
