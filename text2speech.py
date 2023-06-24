@@ -4,7 +4,8 @@ from pydub import AudioSegment
 import azure.cognitiveservices.speech as speechsdk
 import streamlit as st
 
-def speech_mp3_generator(file_path):
+def speech_mp3_generator(file):
+    file_path = "output.txt"
     # Creates an instance of a speech config with specified subscription key and service region.
     speech_config = speechsdk.SpeechConfig(subscription=st.secrets["subscription_key"], region=st.secrets["region"])
     # Sets the synthesis output format.
