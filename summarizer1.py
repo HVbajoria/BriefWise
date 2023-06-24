@@ -12,7 +12,8 @@ def summarizer(text, tokenizer=nlp, max_sent_in_summary=3):
     
     sentence_organizer = {k:v for v,k in enumerate(sentences)}
     
-    vectorizer = TfidfVectorizer(min_df=2,  max_features=None, 
+    vectorizer = TfidfVectorizer(min_df=2, max_dif = 6, 
+                                        max_features=None, 
                                         strip_accents='unicode', 
                                         analyzer='word',
                                         token_pattern=r'\w{1,}',
