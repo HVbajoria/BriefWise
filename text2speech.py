@@ -15,8 +15,8 @@ def speech_mp3_generator(file):
     # Creates a speech synthesizer using file as audio output.
     # Replace with your own audio file name.
     file_name = "outputaudio.mp3"
-    file_config = AudioOutputConfig(filename=file_name)
-    speech_synthesizer = SpeechSynthesizer(speech_config=speech_config, audio_config=file_config)
+    file_config = speechsdk.audio.AudioOutputConfig(filename=file_name)
+    speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=file_config)
 
     # Input text to be converted to speech
     with open(file_path, 'r') as file:
