@@ -35,7 +35,7 @@ if col1.button('SUMMARIZE'):
                     num = len(pdf_reader.pages)
                     for i in range(0,num):
                         pageobj = pdf_reader.pages[i]
-                        resulttext = pageobj.extractText()
+                        resulttext = pageobj.extract_text()
                         text = text.join(resulttext)
                         text = re.sub(r'(?<=\S)\s{2,}(?=\S)', ' ', text)
                         text = re.sub(r'\n', ' ', text)
