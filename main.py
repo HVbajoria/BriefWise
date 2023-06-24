@@ -7,7 +7,7 @@ from summarizer1 import summarizer
 from summarizer2 import generate_summary
 from pathlib import Path
 import os
-import PyPDF2
+from PyPDF2 import PdfReader
 
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
@@ -31,10 +31,10 @@ if col1.button('SUMMARIZE'):
                 st.stop()
             else:
                 if file.name[-3:] == "pdf":
-                    pdfReader = PyPDF2.PdfFileReader(file)
-                    num = pdfReader.numPages
+                    pdf_reader = PdfReader(file)
+                    num = len(pdf_reader.pages)
                     for i in range(0,num):
-                        pageobj = pdfReader.pages[i]
+                        pageobj = pdf_reader.pages[page_num]
                         resulttext = pageobj.extractText()
                         text = text.join(resulttext)
                         text = re.sub(r'(?<=\S)\s{2,}(?=\S)', ' ', text)
