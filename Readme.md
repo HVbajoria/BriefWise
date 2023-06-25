@@ -26,12 +26,12 @@ In today's information age, we are bombarded with an overwhelming amount of cont
 * People often lack the resources, expertise, or time to perform content summarisation and sentiment analysis effectively.
 * People with visual impairments encounter difficulties in consuming lengthy texts as they heavily rely on visual cues for content understanding.
 * Existing content summarization and sentiment analysis approaches often overlook the specific needs of people with disabilities, leading to a lack of inclusivity.
-* Existing platforms charges a specific fee for downloading the generated content.
+* Existing platforms charge a specific fee for downloading the generated content.
 
 ## Solution: 💡 
 **BriefWise** is a comprehensive solution that addresses the aforementioned problems. With BriefWise individuals can effortlessly summarize and analyze content, enhancing their ability to navigate the information landscape, understand public sentiment, and make informed choices.
 * Users can submit their content in .pdf or .txt format, or enter text directly into the application's text area for processing.
-* Leveraging Microsoft Azure Cognitive Services, the application utilizes cost-effective methods to summarize content and analyze sentiment.
+* Leveraging Microsoft Azure Cognitive Services, the application utilizes cost-effective methods to summarize the content and analyze sentiment.
 * The solution employs the sklearn TfidfVectorizer and spacy library in Python to generate accurate and concise summaries.
 * A user-friendly UI/UX, developed using Streamlit, ensures a seamless and intuitive experience for all users.
 * Microsoft Azure Text to Speech Cognitive Service is utilized to convert the generated result into an .MP3 file, enabling people with disabilities to listen to the content.
@@ -44,10 +44,10 @@ The following tech stacks have been used to create the application and deploy it
 * **Python** to build the application.
 * **Streamlit** to create a responsive web application along with widgets. 
 * **Streamlit Community Cloud** to deploy the web application for anyone across the globe to access it. 
-* **Microsoft Azure AI Cognitive Service** to summarise the content, analyze it's sentiment using the pre-trained Azure AI models and OpenAI. 
+* **Microsoft Azure AI Cognitive Service** to summarise the content, and analyze it's sentiment using the pre-trained Azure AI models and OpenAI. 
 * **Microsoft Azure Text to Speech Service** to convert the generated text to speech (.mp3) format. 
 * **Python Libraries (sklearn, spacy)** to summarise the content with the help of NLP. 
-* **GitHub** to host the source code, use the version control (collaboration history) to understand the changes and go back and forth if required to complete the software. 
+* **GitHub** to host the source code, use the version control (collaboration history) to understand the changes, and go back and forth if required to complete the software. 
 
 ## Installation Guide: ⬇️
 First, install the following:
@@ -62,7 +62,7 @@ sudo apt-get install build-essential libssl-dev ca-certificates libasound2 wget
 
 Then, follow this step-by-step process to run this application:
 * Get your Azure subscription: https://azure.microsoft.com/free/cognitive-services
-* Create a Azure Speech resource: https://azure.microsoft.com/free/cognitive-services
+* Create an Azure Speech resource: https://azure.microsoft.com/free/cognitive-services
 * Create the Azure Language resource: https://aka.ms/languageStudio 
 * Travel to the directory where you wish to store the project files using the cd command.
 * Clone the repository in your local system.
@@ -85,14 +85,14 @@ streamlit run main.py
 ```
 * Enjoy the app!
 
-## Demo Video Link :movie_camera: : 
+## Demo Video Link :movie_camera: : https://youtu.be/HMLu0Ww4my0
 
 ## Website Link :globe_with_meridians: : https://briefwise.streamlit.app/
 
 ## Methodology :
-The methodology for the seamless execution of the whole application is given below. It describes how the application works behind the application to securely fetch, generate the content. 
+The methodology for the seamless execution of the whole application is given below. It describes how the application works behind the application to securely fetch, and generate the content. 
 
-#### For summarising and analysing sentiment of the document:
+#### For summarising and analyzing the sentiment of the document:
 <p align="center">
 <img src="https://ipfs.io/ipfs/bafybeidt565y6lu6dqhvfm5akbwq6ul3jm532zkge5xebckxphrov7b65m/M1.png" width="520" alt="accessibility text" >
   </p>
@@ -105,12 +105,12 @@ The methodology for the seamless execution of the whole application is given bel
 </br>
 
  ## Social Impact / Novelty:
-This application will redefine the way we consume knowledge, make decisions in a fast-paced world with tons of information generated every minute.  
-* This will help everyone free their mind and get relaxed and not go through stress, depression which are becoming common nowadays. 
+This application will redefine the way we consume knowledge, and make decisions in a fast-paced world with tons of information generated every minute.  
+* This will help everyone free their mind and get relaxed and not go through stress, depression which is becoming common nowadays. 
 * BriefWise breaks down barriers, ensuring that individuals of all backgrounds and abilities can simplify and understand complex content.
 * Leveraging Microsoft Azure Cognitive Services, the solution offers efficient and cost-effective content summarization and sentiment analysis.
 * With a streamlined UI developed using Streamlit, BriefWise provides an intuitive and accessible user experience for individuals of varying technical expertise.
-* Integration of Microsoft Azure Text to Speech Cognitive Service allows users with visual impairments to listen to the generated content, promoting inclusivity.
+* Integration of Microsoft Azure Text-to-Speech Cognitive Service allows users with visual impairments to listen to the generated content, promoting inclusivity.
 * BriefWise provides an audio player feature, enabling users to download the generated content as an .MP3 file for convenient access and future reference.
 * The application facilitates easy summarization of large files, allowing users to efficiently process extensive amounts of information.
 * By simplifying content understanding and sentiment analysis, BriefWise empowers individuals to make informed decisions and engage in meaningful discussions.
