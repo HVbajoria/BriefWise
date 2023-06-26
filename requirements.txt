@@ -6,3 +6,4 @@ scikit-learn
 azure-cognitiveservices-speech
 pydub
 gTTS
+spacy
