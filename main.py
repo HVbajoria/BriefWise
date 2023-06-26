@@ -1,5 +1,5 @@
 import re
-from sentiment import analyze_sentiment
+from azuresentiment import analyze_sentiment
 import streamlit as st
 from io import StringIO
 from pdf_txt import pdf_to_text
