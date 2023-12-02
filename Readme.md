@@ -104,6 +104,12 @@ The methodology for the seamless execution of the whole application is given bel
   </p>
 </br>
 
+#### Complete Application Architecture:
+<p align="center">
+<img src="https://datasetlegitlens.blob.core.windows.net/dataset/BriefWise%20(1).png?sp=r&st=2023-12-02T08:57:55Z&se=2023-12-02T16:57:55Z&sv=2022-11-02&sr=b&sig=nJVPVJL0ds43%2F3UDh%2FDaevmoTW%2FTQ4QVBk28oUEJjXg%3D" width="980" alt="accessibility text" >
+  </p>
+</br>
+
  ## Social Impact / Novelty:
 This application will redefine the way we consume knowledge, and make decisions in a fast-paced world with tons of information generated every minute.  
 * This will help everyone free their mind and get relaxed and not go through stress, depression which is becoming common nowadays. 
